@@ -1,0 +1,6 @@
+requests>=2.32
+pandas>=2.2
+pandas-ta==0.4.71b0
+numpy
+yfinance>=0.2.40
+matplotlib>=3.8
