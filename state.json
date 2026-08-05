@@ -6,12 +6,12 @@
     "rsi_zone": "neutral"
   },
   "TLKM.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "ASII.JK": {
     "rsi_zone": "neutral"
   },
   "BMRI.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   }
 }
