@@ -1,12 +1,35 @@
 """
-Generates a 4-panel chart (Price+EMA, Volume, RSI, MACD) as PNG image
-bytes, ready to send via Telegram's sendPhoto endpoint.
+Generates a 4-panel chart (Candlesticks+EMA, Volume, RSI, MACD) as PNG
+image bytes, ready to send via Telegram's sendPhoto endpoint.
 """
 
 import io
 import matplotlib
 matplotlib.use("Agg")  # non-interactive backend, safe for CI/servers
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+
+
+def _plot_candlesticks(ax, x, plot_df):
+    """Draws OHLC candlesticks at positions x using plot_df's open/high/low/close."""
+    width = 0.6
+    for xi, (o, h, l, c) in zip(x, zip(plot_df["open"], plot_df["high"],
+                                        plot_df["low"], plot_df["close"])):
+        is_up = c >= o
+        color = "#26a69a" if is_up else "#ef5350"  # teal up / red down
+
+        # Wick (high-low line)
+        ax.plot([xi, xi], [l, h], color=color, linewidth=0.8, zorder=2)
+
+        # Body (open-close rectangle)
+        body_bottom = min(o, c)
+        body_height = abs(c - o)
+        if body_height == 0:
+            body_height = (h - l) * 0.02 or 0.01  # thin sliver for doji candles
+        ax.add_patch(Rectangle(
+            (xi - width / 2, body_bottom), width, body_height,
+            facecolor=color, edgecolor=color, zorder=3
+        ))
 
 
 def generate_chart(symbol: str, df) -> bytes:
@@ -33,21 +56,25 @@ def generate_chart(symbol: str, df) -> bytes:
     )
     fig.suptitle(f"{symbol}", fontsize=14, fontweight="bold")
 
-    # --- Panel 1: Price + EMA ---
+    # --- Panel 1: Candlesticks + EMA ---
     ax_price = axes[0]
-    ax_price.plot(x, plot_df["close"], label="Close", color="#1f77b4", linewidth=1.5)
-    ax_price.plot(x, plot_df["ema_20"], label="EMA 20", color="#ff7f0e", linewidth=1, linestyle="--")
-    ax_price.plot(x, plot_df["ema_50"], label="EMA 50", color="#2ca02c", linewidth=1, linestyle="--")
+    _plot_candlesticks(ax_price, x, plot_df)
+    ax_price.plot(x, plot_df["ema_20"], label="EMA 20", color="#ff9800", linewidth=1.2)
+    ax_price.plot(x, plot_df["ema_50"], label="EMA 50", color="#2962ff", linewidth=1.2)
     ax_price.set_ylabel("Price")
     ax_price.legend(loc="upper left", fontsize=8)
     ax_price.grid(alpha=0.3)
 
     # --- Panel 2: Volume ---
     ax_vol = axes[1]
+    # Color by candle direction (teal up / red down) to match the price panel,
+    # full opacity for volume spikes vs average, faded otherwise.
     vol_avg = plot_df["volume_avg_20"]
-    colors = ["#d62728" if v > a else "#7f7f7f"
-              for v, a in zip(plot_df["volume"], vol_avg.fillna(0))]
-    ax_vol.bar(x, plot_df["volume"], color=colors, width=0.7)
+    vol_colors = []
+    for o, c, v, a in zip(plot_df["open"], plot_df["close"], plot_df["volume"], vol_avg.fillna(0)):
+        base = "#26a69a" if c >= o else "#ef5350"
+        vol_colors.append(base if v > a else base + "80")  # add alpha if not a spike
+    ax_vol.bar(x, plot_df["volume"], color=vol_colors, width=0.7)
     ax_vol.set_ylabel("Volume")
     ax_vol.grid(alpha=0.3)
 
