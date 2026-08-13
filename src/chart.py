@@ -18,7 +18,14 @@ def generate_chart(symbol: str, df) -> bytes:
     """
     # Use the last ~60 candles so the chart stays readable
     plot_df = df.tail(60).reset_index(drop=True)
-    x = plot_df["open_time"]
+
+    # Use a sequential index for x instead of real timestamps. Real
+    # timestamps create big visual gaps/spikes across the lunch break and
+    # overnight/weekend, which makes the line look jagged even though the
+    # actual price movement is smooth. Plotting candle-to-candle instead
+    # (like TradingView/mplfinance do) fixes that.
+    x = range(len(plot_df))
+    time_labels = plot_df["open_time"]
 
     fig, axes = plt.subplots(
         4, 1, figsize=(10, 11), sharex=True,
@@ -40,7 +47,7 @@ def generate_chart(symbol: str, df) -> bytes:
     vol_avg = plot_df["volume_avg_20"]
     colors = ["#d62728" if v > a else "#7f7f7f"
               for v, a in zip(plot_df["volume"], vol_avg.fillna(0))]
-    ax_vol.bar(x, plot_df["volume"], color=colors, width=0.03)
+    ax_vol.bar(x, plot_df["volume"], color=colors, width=0.7)
     ax_vol.set_ylabel("Volume")
     ax_vol.grid(alpha=0.3)
 
@@ -59,15 +66,18 @@ def generate_chart(symbol: str, df) -> bytes:
     ax_macd.plot(x, plot_df["MACDs_12_26_9"], label="Signal", color="#ff7f0e", linewidth=1)
     hist = plot_df["MACDh_12_26_9"]
     hist_colors = ["#2ca02c" if v >= 0 else "#d62728" for v in hist.fillna(0)]
-    ax_macd.bar(x, hist, color=hist_colors, width=0.03)
+    ax_macd.bar(x, hist, color=hist_colors, width=0.7)
     ax_macd.set_ylabel("MACD")
     ax_macd.legend(loc="upper left", fontsize=8)
     ax_macd.grid(alpha=0.3)
 
-    # Thin out x-axis labels so they don't overlap
-    ax_macd.tick_params(axis="x", rotation=45, labelsize=8)
+    # Label a handful of x-ticks with real dates/times instead of every point
     step = max(len(x) // 8, 1)
-    ax_macd.set_xticks(x[::step])
+    tick_positions = list(x)[::step]
+    tick_labels = [time_labels.iloc[i].strftime("%m-%d %H:%M") for i in tick_positions]
+    ax_macd.set_xticks(tick_positions)
+    ax_macd.set_xticklabels(tick_labels, rotation=45, fontsize=8, ha="right")
+    ax_macd.set_xlim(-1, len(x))
 
     fig.tight_layout()
 
