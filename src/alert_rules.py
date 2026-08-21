@@ -4,9 +4,10 @@ by tracking the last-known state per symbol in state.json.
 """
 
 import json
-import os
 from pathlib import Path
 import pandas as pd
+
+from divergence import detect_bullish_divergence
 
 STATE_FILE = Path(__file__).resolve().parent.parent / "state.json"
 
@@ -23,10 +24,13 @@ def save_state(state: dict) -> None:
         json.dump(state, f, indent=2)
 
 
-def check_alerts(symbol: str, df, state: dict) -> list[str]:
+def check_alerts(symbol: str, df: pd.DataFrame, state: dict):
     """
-    Looks at the latest row of indicator data and returns a list
-    of human-readable alert messages that should be sent.
+    Looks at the latest row of indicator data and returns:
+      (messages, divergence)
+    - messages: list of human-readable alert strings to send
+    - divergence: the divergence dict from detect_bullish_divergence(),
+      or None — passed along so the chart can draw the pivot lines
     Updates `state` in place so we don't re-alert every run.
     """
     messages = []
@@ -65,5 +69,26 @@ def check_alerts(symbol: str, df, state: dict) -> list[str]:
     if pd.notna(vol_avg) and vol_avg > 0 and vol > 2 * vol_avg:
         messages.append(f"🔊 {symbol}: Volume spike — {vol:,.0f} vs avg {vol_avg:,.0f}")
 
+    # --- RSI divergence (regular bullish + hidden bullish) ---
+    divergence = detect_bullish_divergence(df, indicator_col="rsi", price_col="low",
+                                            order=3, lookback=60)
+    if divergence:
+        # Use the pivot's actual timestamp as the dedup key, since candle
+        # positions shift every run as new candles arrive.
+        recent_times = df.tail(60).reset_index(drop=True)["open_time"]
+        pivot_time = str(recent_times.iloc[divergence["pivot2_idx"]])
+        state_key = f"divergence_{divergence['type']}"
+
+        if sym_state.get(state_key) != pivot_time:
+            sym_state[state_key] = pivot_time
+            if divergence["type"] == "regular_bullish":
+                messages.append(
+                    f"🟢🔀 {symbol}: Bullish Divergence (price lower low, RSI higher low) — possible reversal"
+                )
+            else:  # hidden_bullish
+                messages.append(
+                    f"🟩🔁 {symbol}: Hidden Bullish Divergence (price higher low, RSI lower low) — uptrend likely continuing"
+                )
+
     state[symbol] = sym_state
-    return messages
+    return messages, divergence

@@ -1,5 +1,5 @@
 """
-Sends alert messages to a Telegram chat via the Bot API.
+Sends alert messages/photos to a Telegram chat via the Bot API.
 Requires TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID environment variables.
 """
 

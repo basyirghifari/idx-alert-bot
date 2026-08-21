@@ -34,7 +34,6 @@ def fetch_ohlcv(symbol: str, interval: str = "15m", period: str = "5d") -> pd.Da
         raise ValueError(f"No data returned for {symbol} (interval={interval}, period={period})")
 
     df = df.reset_index()
-    # yfinance names the time column "Datetime" for intraday, "Date" for daily
     time_col = "Datetime" if "Datetime" in df.columns else "Date"
 
     df = df.rename(columns={
@@ -50,6 +49,5 @@ def fetch_ohlcv(symbol: str, interval: str = "15m", period: str = "5d") -> pd.Da
 
 
 if __name__ == "__main__":
-    # Quick manual test
     data = fetch_ohlcv("BBCA.JK", interval="15m", period="5d")
     print(data.tail())
