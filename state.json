@@ -18,7 +18,8 @@
     "rsi_zone": "neutral"
   },
   "TPIA.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_regular_bullish": "2026-08-20 15:00:00+07:00"
   },
   "BNBR.JK": {
     "rsi_zone": "neutral"
@@ -27,7 +28,7 @@
     "rsi_zone": "neutral"
   },
   "BHIT.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "PNLF.JK": {
     "rsi_zone": "neutral"
@@ -60,10 +61,10 @@
     "rsi_zone": "neutral"
   },
   "AALI.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "LSIP.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "PGAS.JK": {
     "rsi_zone": "neutral"
@@ -81,7 +82,8 @@
     "rsi_zone": "neutral"
   },
   "GGRM.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_hidden_bullish": "2026-08-20 15:00:00+07:00"
   },
   "HMSP.JK": {
     "rsi_zone": "neutral"
