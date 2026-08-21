@@ -133,17 +133,24 @@ def _draw_timeframe_column(axes_col, plot_df, timeframe_label: str, date_fmt: st
 
 def generate_dual_chart(symbol: str, df_15m, df_1d,
                          candles_15m: int = 60, candles_1d: int = 60,
-                         divergence: dict = None) -> bytes:
+                         divergence: dict = None,
+                         left_label: str = "15-Minute Chart",
+                         left_date_fmt: str = "%m-%d %H:%M") -> bytes:
     """
-    Renders two timeframes side by side in one image: 15-minute chart on
-    the left, 1-day chart on the right. Both df_15m and df_1d must already
-    have indicator columns from indicators.add_indicators().
+    Renders two timeframes side by side in one image: the shorter/left
+    timeframe (default 15-minute) and 1-day chart on the right. Both
+    df_15m and df_1d must already have indicator columns from
+    indicators.add_indicators().
+
+    left_label / left_date_fmt let you relabel the left column for a
+    different base timeframe (e.g. "2-Hour Chart", "%m-%d %H:%M") without
+    changing what the data actually is — main.py controls what's fetched.
 
     `divergence`, if provided (from divergence.detect_bullish_divergence
-    run against df_15m), is drawn as a connecting line on the 15m column's
-    price and RSI panels. Pivot indices in `divergence` must be relative
-    to df_15m.tail(candles_15m) — i.e. call detect_bullish_divergence with
-    the same lookback as candles_15m.
+    run against df_15m), is drawn as a connecting line on the left
+    column's price and RSI panels. Pivot indices in `divergence` must be
+    relative to df_15m.tail(candles_15m) — i.e. call
+    detect_bullish_divergence with the same lookback as candles_15m.
 
     Returns PNG image bytes.
     """
@@ -156,7 +163,7 @@ def generate_dual_chart(symbol: str, df_15m, df_1d,
     )
     fig.suptitle(symbol, fontsize=15, fontweight="bold")
 
-    _draw_timeframe_column(axes[:, 0], plot_15m, "15-Minute Chart", "%m-%d %H:%M",
+    _draw_timeframe_column(axes[:, 0], plot_15m, left_label, left_date_fmt,
                             divergence=divergence)
     _draw_timeframe_column(axes[:, 1], plot_1d, "1-Day Chart", "%Y-%m-%d")
 
