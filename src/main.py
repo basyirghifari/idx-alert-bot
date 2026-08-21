@@ -59,18 +59,26 @@ FMCG_STOCKS = [
 
 WATCHLIST = CONGLOMERATE_GROUP_STOCKS + COMMODITY_STOCKS + FMCG_STOCKS
 
-# Alerts (including divergence) are evaluated on the 15-minute timeframe.
-INTERVAL = "15m"
-PERIOD = "5d"        # must fit yfinance's interval limits, see fetch_data.py
+# Alerts (including divergence) are evaluated on the 1-hour timeframe —
+# better suited for swing trading than 15m, since it filters out a lot
+# of intraday noise while still updating several times per session.
+# yfinance supports "1h" natively, so no resampling is needed.
+INTERVAL = "1h"
+PERIOD = "3mo"       # must fit yfinance's interval limits, see fetch_data.py
+                      # (1h data is available for up to 730 days)
+
+CHART_LABEL = "1-Hour Chart"
+CHART_DATE_FMT = "%m-%d %H:%M"
 
 # The daily timeframe is only used for the second chart panel (context),
 # not for alert evaluation.
 DAILY_INTERVAL = "1d"
 DAILY_PERIOD = "6mo"
 
-# How many recent 15m candles the divergence check looks at. Must match
+# How many recent 1h candles the divergence check looks at. Must match
 # the candles_15m passed to generate_dual_chart so pivot indices line up
-# with what's actually drawn on the chart.
+# with what's actually drawn on the chart. 60 hourly candles covers
+# roughly the last 2-3 trading weeks for IDX (session ≈ 5.3h/day).
 DIVERGENCE_LOOKBACK = 60
 
 
@@ -96,6 +104,8 @@ def main():
                     symbol, df, df_daily,
                     candles_15m=DIVERGENCE_LOOKBACK,
                     divergence=divergence,
+                    left_label=CHART_LABEL,
+                    left_date_fmt=CHART_DATE_FMT,
                 )
                 send_telegram_photo(chart_bytes, caption=caption)
         except Exception as e:
