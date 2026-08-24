@@ -31,7 +31,7 @@
     "rsi_zone": "neutral"
   },
   "PNLF.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "MEGA.JK": {
     "rsi_zone": "neutral"
@@ -52,13 +52,13 @@
     "rsi_zone": "neutral"
   },
   "ANTM.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "MDKA.JK": {
     "rsi_zone": "neutral"
   },
   "TINS.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "AALI.JK": {
     "rsi_zone": "neutral"
