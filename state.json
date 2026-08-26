@@ -46,7 +46,7 @@
     "divergence_hidden_bullish": "2026-08-21 15:00:00+07:00"
   },
   "PTBA.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "ITMG.JK": {
     "rsi_zone": "neutral"
@@ -55,16 +55,16 @@
     "rsi_zone": "neutral"
   },
   "ANTM.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "MDKA.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "TINS.JK": {
     "rsi_zone": "neutral"
   },
   "AALI.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "LSIP.JK": {
     "rsi_zone": "neutral"
