@@ -15,11 +15,11 @@
     "rsi_zone": "overbought"
   },
   "BRPT.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-08-24 11:00:00+07:00"
   },
   "TPIA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-08-20 15:00:00+07:00"
   },
   "BNBR.JK": {
@@ -82,7 +82,7 @@
     "rsi_zone": "neutral"
   },
   "ICBP.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "MYOR.JK": {
     "rsi_zone": "oversold"
