@@ -4,3 +4,7 @@ pandas-ta==0.4.71b0
 numpy
 yfinance>=0.2.40
 matplotlib>=3.8
+anthropic>=0.40
+google-genai>=1.0
+gspread>=6.1
+google-auth>=2.35
