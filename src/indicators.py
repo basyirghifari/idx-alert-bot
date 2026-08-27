@@ -24,4 +24,9 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     df["volume_avg_20"] = df["volume"].rolling(window=20).mean()
 
+    # ATR (Average True Range) — used by ai_analysis.py as a volatility
+    # baseline for entry/TP/SL suggestions, and as the fallback calculation
+    # if the AI call fails or isn't configured.
+    df["atr"] = ta.atr(df["high"], df["low"], df["close"], length=14)
+
     return df

@@ -2,15 +2,23 @@
 Main entry point. Loops over your stock watchlist, fetches data via
 yfinance, computes indicators, checks alert rules (including RSI
 divergence), and sends any triggered alerts to Telegram with a dual
-timeframe chart. Designed to run on a schedule during market hours
-(see .github/workflows/check.yml).
+timeframe chart. For BUY-side signals, also asks the Claude API for a
+suggested entry range / take-profit / stop-loss, logs the call to
+Google Sheets, and — at the start of each run — checks any previously
+logged OPEN positions to see if they've hit TP or SL yet.
+
+Designed to run on a schedule during market hours (see
+.github/workflows/check.yml).
 """
 
 from fetch_data import fetch_ohlcv
 from indicators import add_indicators
 from alert_rules import load_state, save_state, check_alerts
-from telegram_bot import send_telegram_photo
+from telegram_bot import send_telegram_photo, send_telegram_message
 from chart import generate_dual_chart
+from ai_analysis import generate_trade_plan
+import google_sheets
+import position_tracker
 
 # Edit this list to whatever IDX tickers you want to track.
 # Yahoo Finance uses the ".JK" suffix for Indonesia Stock Exchange listings.
@@ -81,8 +89,37 @@ DAILY_PERIOD = "6mo"
 # roughly the last 2-3 trading weeks for IDX (session ≈ 5.3h/day).
 DIVERGENCE_LOOKBACK = 60
 
+# Only these signal types count as a BUY-side call that gets an AI
+# entry/TP/SL plan and gets logged to Google Sheets. MACD bearish
+# crossover, RSI overbought, and a plain volume spike are excluded —
+# they're either sell-side or direction-neutral signals.
+BUY_SIGNAL_KEYWORDS = [
+    "RSI oversold",
+    "MACD bullish crossover",
+    "Bullish Divergence",
+    "Hidden Bullish Divergence",
+]
+
+# Which AI provider generates the entry/TP/SL plan: "claude" or "gemini".
+# Switching requires the matching API key secret (ANTHROPIC_API_KEY or
+# GEMINI_API_KEY) to be set — see README. If the key is missing or the
+# call fails, it automatically falls back to the ATR-based calculation
+# regardless of which provider is selected here.
+AI_PROVIDER = "gemini"
+
+
+def is_buy_signal(message: str) -> bool:
+    return any(keyword in message for keyword in BUY_SIGNAL_KEYWORDS)
+
 
 def main():
+    # --- Step 1: check any previously logged OPEN positions for TP/SL hits ---
+    try:
+        position_tracker.check_open_positions(send_notification=send_telegram_message)
+    except Exception as e:
+        print(f"Position tracking skipped due to error: {e}")
+
+    # --- Step 2: evaluate new alerts as usual ---
     state = load_state()
     any_alerts = False
 
@@ -95,6 +132,34 @@ def main():
             if messages:
                 any_alerts = True
                 caption = "\n".join(messages)
+
+                # --- BUY-side signals get an AI trade plan + Sheets log ---
+                buy_messages = [m for m in messages if is_buy_signal(m)]
+                if buy_messages:
+                    try:
+                        plan = generate_trade_plan(symbol, df, buy_messages, provider=AI_PROVIDER)
+                        caption += (
+                            f"\n\n📋 Trade Plan ({plan['source']}):\n"
+                            f"Entry: {plan['entry_low']:,.0f} – {plan['entry_high']:,.0f}\n"
+                            f"TP: {plan['take_profit']:,.0f}\n"
+                            f"SL: {plan['stop_loss']:,.0f}\n"
+                            f"{plan['reasoning']}"
+                        )
+                        try:
+                            google_sheets.append_trade(
+                                symbol=symbol,
+                                signal="; ".join(buy_messages),
+                                entry_low=plan["entry_low"],
+                                entry_high=plan["entry_high"],
+                                take_profit=plan["take_profit"],
+                                stop_loss=plan["stop_loss"],
+                                notes=plan["reasoning"],
+                            )
+                        except Exception as e:
+                            print(f"Could not log trade to Google Sheets for {symbol}: {e}")
+                    except Exception as e:
+                        print(f"AI trade plan step failed for {symbol}: {e}")
+
                 print(f"Sending alert for {symbol}:\n{caption}")
 
                 df_daily = fetch_ohlcv(symbol, interval=DAILY_INTERVAL, period=DAILY_PERIOD)
