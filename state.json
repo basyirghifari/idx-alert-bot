@@ -42,7 +42,7 @@
     "rsi_zone": "neutral"
   },
   "ADRO.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-21 15:00:00+07:00"
   },
   "PTBA.JK": {
@@ -82,7 +82,7 @@
     "rsi_zone": "neutral"
   },
   "ICBP.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "MYOR.JK": {
     "rsi_zone": "oversold"
