@@ -18,6 +18,7 @@ keeps working either way.
 import os
 import json
 import re
+import time
 
 import pandas as pd
 
@@ -26,6 +27,17 @@ CLAUDE_MODEL = "claude-sonnet-4-6"
 # change fairly often — check https://ai.google.dev/gemini-api/docs/models
 # if this call starts failing with a "model not found" error.
 GEMINI_MODEL = "gemini-3.7-flash"
+
+# Error text fragments that indicate a TRANSIENT problem worth retrying
+# (server overloaded, rate limited, temporary network blip) rather than
+# something that will keep failing no matter how many times we ask.
+RETRYABLE_ERROR_HINTS = [
+    "503", "unavailable", "overloaded",
+    "429", "rate limit", "resource_exhausted", "quota",
+    "timeout", "timed out", "connection",
+]
+MAX_RETRIES = 2
+RETRY_BASE_DELAY_SECONDS = 3
 
 _claude_client = None
 _gemini_client = None
@@ -82,6 +94,34 @@ def _call_gemini(prompt: str) -> str:
         config=types.GenerateContentConfig(response_mime_type="application/json"),
     )
     return response.text
+
+
+def _is_retryable(error: Exception) -> bool:
+    err_str = str(error).lower()
+    return any(hint in err_str for hint in RETRYABLE_ERROR_HINTS)
+
+
+def _call_with_retry(call_fn, prompt: str) -> str:
+    """
+    Calls call_fn(prompt), retrying with exponential backoff (3s, 6s) if
+    the error looks transient (503 overloaded, 429 rate limit, timeout).
+    Non-retryable errors (bad API key, invalid model name, etc.) raise
+    immediately on the first attempt — retrying those would just waste
+    time before falling back anyway.
+    """
+    last_error = None
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            return call_fn(prompt)
+        except Exception as e:
+            last_error = e
+            if not _is_retryable(e) or attempt == MAX_RETRIES:
+                raise
+            delay = RETRY_BASE_DELAY_SECONDS * (attempt + 1)
+            print(f"AI call transient error (attempt {attempt + 1}/{MAX_RETRIES + 1}), "
+                  f"retrying in {delay}s: {e}")
+            time.sleep(delay)
+    raise last_error  # unreachable, but keeps type checkers happy
 
 
 def _fallback_plan(current_price: float, atr: float) -> dict:
@@ -150,9 +190,9 @@ Respond with ONLY a JSON object, no other text, no markdown fences:
 {{"entry_low": <number>, "entry_high": <number>, "take_profit": <number>, "stop_loss": <number>, "reasoning": "<one sentence, under 30 words>"}}"""
 
         if provider == "gemini":
-            text = _call_gemini(prompt)
+            text = _call_with_retry(_call_gemini, prompt)
         elif provider == "claude":
-            text = _call_claude(prompt)
+            text = _call_with_retry(_call_claude, prompt)
         else:
             raise ValueError(f"Unknown AI provider: {provider!r} (use 'claude' or 'gemini')")
 
