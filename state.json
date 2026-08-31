@@ -39,11 +39,11 @@
     "divergence_hidden_bullish": "2026-08-24 10:00:00+07:00"
   },
   "SMAR.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-28 10:00:00+07:00"
   },
   "ADRO.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-21 15:00:00+07:00"
   },
   "PTBA.JK": {
@@ -51,7 +51,7 @@
     "divergence_hidden_bullish": "2026-08-26 09:00:00+07:00"
   },
   "ITMG.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "INCO.JK": {
     "rsi_zone": "neutral"
@@ -80,16 +80,16 @@
     "divergence_hidden_bullish": "2026-08-24 09:00:00+07:00"
   },
   "UNVR.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ICBP.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "MYOR.JK": {
     "rsi_zone": "oversold"
   },
   "GGRM.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-20 15:00:00+07:00"
   },
   "HMSP.JK": {
