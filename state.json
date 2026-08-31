@@ -80,10 +80,10 @@
     "divergence_hidden_bullish": "2026-08-24 09:00:00+07:00"
   },
   "UNVR.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "ICBP.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "MYOR.JK": {
     "rsi_zone": "oversold"
