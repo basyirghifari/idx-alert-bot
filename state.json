@@ -47,14 +47,14 @@
     "divergence_hidden_bullish": "2026-08-21 15:00:00+07:00"
   },
   "PTBA.JK": {
-    "rsi_zone": "overbought",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-08-26 09:00:00+07:00"
   },
   "ITMG.JK": {
     "rsi_zone": "neutral"
   },
   "INCO.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ANTM.JK": {
     "rsi_zone": "neutral"
@@ -70,7 +70,7 @@
     "rsi_zone": "overbought"
   },
   "LSIP.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "PGAS.JK": {
     "rsi_zone": "neutral"
@@ -154,7 +154,8 @@
     "rsi_zone": "neutral"
   },
   "DNET.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_hidden_bullish": "2026-09-01 11:00:00+07:00"
   },
   "IMAS.JK": {
     "rsi_zone": "neutral"
