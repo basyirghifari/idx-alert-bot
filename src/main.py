@@ -65,7 +65,62 @@ FMCG_STOCKS = [
     "CPIN.JK",   # Charoen Pokphand Indonesia — poultry/food
 ]
 
-WATCHLIST = CONGLOMERATE_GROUP_STOCKS + COMMODITY_STOCKS + FMCG_STOCKS
+# Bakrie Group ecosystem. BNBR (the group's holding company) is already
+# tracked under CONGLOMERATE_GROUP_STOCKS above, so it's not repeated
+# here to avoid a duplicate in WATCHLIST.
+BAKRIE_GROUP_STOCKS = [
+    "BUMI.JK",   # Bumi Resources — coal mining
+    "BRMS.JK",   # Bumi Resources Minerals — mineral & gold mining
+    "ENRG.JK",   # Energi Mega Persada — oil & gas exploration
+    "UNSP.JK",   # Bakrie Sumatera Plantations — palm oil & rubber
+    "ELTY.JK",   # Bakrieland Development — property/real estate
+    "DEWA.JK",   # Darma Henwa — mining contractor services
+    "BTEL.JK",   # Bakrie Telecom — telecommunications
+    "VIVA.JK",   # Visi Media Asia — media & broadcasting (TVOne, ANTV)
+    "MDIA.JK",   # Intermedia Capital — media, VIVA-linked entity
+    "VKTR.JK",   # VKTR Teknologi Mobilitas — electric vehicles
+    "JGLE.JK",   # Graha Andrasentra Propertindo — property (Jungleland)
+]
+
+# Prajogo Pangestu / Barito Group ecosystem. BRPT and TPIA (the group's
+# core holding and petrochemical flagship) are already tracked under
+# CONGLOMERATE_GROUP_STOCKS above, so they're not repeated here.
+PRAJOGO_PANGESTU_STOCKS = [
+    "BREN.JK",   # Barito Renewables Energy — geothermal renewable energy
+    "CUAN.JK",   # Petrindo Jaya Kreasi — coal & gold mining
+    "PTRO.JK",   # Petrosea — mining contractor & engineering services
+    "CDIA.JK",   # Chandra Daya Investasi — energy infrastructure & logistics
+    "GZCO.JK",   # Gozco Plantations — palm oil (partial Prajogo ownership)
+]
+
+# Salim Group ecosystem (Anthoni Salim). ICBP (FMCG), LSIP (palm oil),
+# BUMI (coal, strategic affiliate stake), and MEDC (oil & gas, affiliate
+# stake) are already tracked elsewhere above, so not repeated here.
+SALIM_GROUP_STOCKS = [
+    "INDF.JK",   # Indofood Sukses Makmur — parent, instant noodles & food
+    "SIMP.JK",   # Salim Ivomas Pratama — agribusiness, Bimoli cooking oil
+    "DNET.JK",   # Indoritel Makmur Internasional — holds stakes in Indomaret, FAST, ROTI
+    "IMAS.JK",   # Indomobil Sukses Internasional — automotive & vehicle distribution
+    "IMJS.JK",   # Indomobil Multi Jasa — vehicle finance & leasing services
+    "BINA.JK",   # Bank Ina Perdana — banking
+    "DCII.JK",   # DCI Indonesia — data center provider
+    "AMMN.JK",   # Amman Mineral Internasional — gold & copper mining (affiliate stake)
+]
+
+# Saratoga Group ecosystem (Sandiaga Uno & Edwin Soeryadjaya's investment
+# vehicle). MDKA and ADRO (gold/copper mining and coal/energy, both
+# Saratoga portfolio companies) are already tracked under
+# COMMODITY_STOCKS above, so not repeated here.
+SARATOGA_GROUP_STOCKS = [
+    "SRTG.JK",   # Saratoga Investama Sedaya — the investment holding company itself
+    "MBMA.JK",   # Merdeka Battery Materials — nickel & EV battery ecosystem
+    "TBIG.JK",   # Tower Bersama Infrastructure — telecom tower infrastructure
+    "MPMX.JK",   # Mitra Pinasthika Mustika — automotive, transport & finance
+    "MUTU.JK",   # Mutuagung Lestari — testing/inspection/certification (TIC), Sandiaga entered via private placement 2026
+    "PALM.JK",   # Provident Investasi Bersama (formerly Provident Agro) — agribusiness/CPO
+]
+
+WATCHLIST = CONGLOMERATE_GROUP_STOCKS + COMMODITY_STOCKS + FMCG_STOCKS + BAKRIE_GROUP_STOCKS + PRAJOGO_PANGESTU_STOCKS + SALIM_GROUP_STOCKS + SARATOGA_GROUP_STOCKS
 
 # Alerts (including divergence) are evaluated on the 1-hour timeframe —
 # better suited for swing trading than 15m, since it filters out a lot
