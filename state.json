@@ -70,7 +70,7 @@
     "rsi_zone": "overbought"
   },
   "LSIP.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "PGAS.JK": {
     "rsi_zone": "neutral"
@@ -101,5 +101,92 @@
   },
   "CPIN.JK": {
     "rsi_zone": "neutral"
+  },
+  "BUMI.JK": {
+    "rsi_zone": "overbought"
+  },
+  "BRMS.JK": {
+    "rsi_zone": "neutral"
+  },
+  "ENRG.JK": {
+    "rsi_zone": "overbought"
+  },
+  "UNSP.JK": {
+    "rsi_zone": "neutral"
+  },
+  "ELTY.JK": {
+    "rsi_zone": "neutral"
+  },
+  "DEWA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "VIVA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "MDIA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "VKTR.JK": {
+    "rsi_zone": "neutral"
+  },
+  "JGLE.JK": {
+    "rsi_zone": "neutral"
+  },
+  "BREN.JK": {
+    "rsi_zone": "neutral"
+  },
+  "CUAN.JK": {
+    "rsi_zone": "neutral"
+  },
+  "PTRO.JK": {
+    "rsi_zone": "neutral"
+  },
+  "CDIA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "GZCO.JK": {
+    "rsi_zone": "neutral"
+  },
+  "INDF.JK": {
+    "rsi_zone": "neutral"
+  },
+  "SIMP.JK": {
+    "rsi_zone": "neutral"
+  },
+  "DNET.JK": {
+    "rsi_zone": "neutral"
+  },
+  "IMAS.JK": {
+    "rsi_zone": "neutral"
+  },
+  "IMJS.JK": {
+    "rsi_zone": "neutral"
+  },
+  "BINA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "DCII.JK": {
+    "rsi_zone": "neutral"
+  },
+  "AMMN.JK": {
+    "rsi_zone": "neutral"
+  },
+  "SRTG.JK": {
+    "rsi_zone": "neutral"
+  },
+  "MBMA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "TBIG.JK": {
+    "rsi_zone": "neutral"
+  },
+  "MPMX.JK": {
+    "rsi_zone": "neutral"
+  },
+  "MUTU.JK": {
+    "rsi_zone": "neutral"
+  },
+  "PALM.JK": {
+    "rsi_zone": "overbought"
   }
 }
