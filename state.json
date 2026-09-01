@@ -9,7 +9,7 @@
     "rsi_zone": "neutral"
   },
   "ASII.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "BMRI.JK": {
     "rsi_zone": "overbought"
@@ -51,7 +51,7 @@
     "divergence_hidden_bullish": "2026-08-26 09:00:00+07:00"
   },
   "ITMG.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "INCO.JK": {
     "rsi_zone": "neutral"
@@ -109,7 +109,7 @@
     "rsi_zone": "neutral"
   },
   "ENRG.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "UNSP.JK": {
     "rsi_zone": "neutral"
@@ -136,10 +136,10 @@
     "rsi_zone": "neutral"
   },
   "CUAN.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "PTRO.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "CDIA.JK": {
     "rsi_zone": "neutral"
@@ -187,6 +187,6 @@
     "rsi_zone": "neutral"
   },
   "PALM.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   }
 }
