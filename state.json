@@ -47,14 +47,15 @@
     "divergence_hidden_bullish": "2026-08-21 15:00:00+07:00"
   },
   "PTBA.JK": {
-    "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-01 16:00:00+07:00"
+    "rsi_zone": "overbought",
+    "divergence_hidden_bullish": "2026-09-02 16:00:00+07:00"
   },
   "ITMG.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_hidden_bullish": "2026-09-02 15:00:00+07:00"
   },
   "INCO.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "ANTM.JK": {
     "rsi_zone": "neutral"
@@ -73,10 +74,11 @@
     "rsi_zone": "overbought"
   },
   "PGAS.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_hidden_bullish": "2026-09-03 09:00:00+07:00"
   },
   "MEDC.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-24 09:00:00+07:00"
   },
   "UNVR.JK": {
@@ -97,14 +99,14 @@
     "divergence_regular_bullish": "2026-09-02 10:00:00+07:00"
   },
   "KLBF.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-08-26 09:00:00+07:00"
   },
   "CPIN.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "BUMI.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "BRMS.JK": {
     "rsi_zone": "neutral"
@@ -137,7 +139,7 @@
     "rsi_zone": "neutral"
   },
   "CUAN.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "PTRO.JK": {
     "rsi_zone": "neutral"
@@ -146,23 +148,23 @@
     "rsi_zone": "neutral"
   },
   "GZCO.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "INDF.JK": {
     "rsi_zone": "neutral"
   },
   "SIMP.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "DNET.JK": {
     "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-09-01 11:00:00+07:00"
   },
   "IMAS.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "IMJS.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "BINA.JK": {
     "rsi_zone": "neutral",
