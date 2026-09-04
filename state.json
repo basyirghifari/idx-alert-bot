@@ -1,6 +1,6 @@
 {
   "BBCA.JK": {
-    "rsi_zone": "overbought"
+    "rsi_zone": "neutral"
   },
   "BBRI.JK": {
     "rsi_zone": "overbought"
@@ -131,7 +131,7 @@
     "rsi_zone": "neutral"
   },
   "VKTR.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "JGLE.JK": {
     "rsi_zone": "neutral"
@@ -169,7 +169,7 @@
   },
   "BINA.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-02 11:00:00+07:00"
+    "divergence_hidden_bullish": "2026-09-04 09:00:00+07:00"
   },
   "DCII.JK": {
     "rsi_zone": "neutral"
