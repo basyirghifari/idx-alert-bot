@@ -1,7 +1,9 @@
 """
 Checks every OPEN position logged in Google Sheets against the latest
-price and marks it TP_HIT (win) or SL_HIT (loss) if the price has reached
-either level. Runs once per workflow execution, before evaluating new
+price. Marks it TP_HIT (win) or SL_HIT (loss) if the price has reached
+either level, and refreshes the current_price column either way — so the
+sheet always shows a live price for positions still OPEN, not just at
+resolution. Runs once per workflow execution, before evaluating new
 alerts, so a position that resolves gets closed out and reported.
 
 This only looks at whichever level (TP or SL) the current price has
@@ -10,7 +12,7 @@ both were crossed within the same 15-minute check window. For a free,
 15-minute-cadence bot this is an acceptable approximation.
 """
 
-from google_sheets import get_open_positions, update_position
+from google_sheets import get_open_positions, update_position, update_current_price
 from fetch_data import fetch_ohlcv
 
 
@@ -62,4 +64,9 @@ def check_open_positions(send_notification=None):
             print(msg)
             if send_notification:
                 send_notification(msg)
-        # else: still open, nothing to update
+        else:
+            # Still open — just refresh the live price so the sheet stays current.
+            try:
+                update_current_price(pos["_row"], price)
+            except Exception as e:
+                print(f"Could not update current_price for {symbol}: {e}")

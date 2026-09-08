@@ -31,7 +31,8 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 WORKSHEET_NAME = "Trades"
 HEADERS = [
     "timestamp", "symbol", "signal", "entry_low", "entry_high",
-    "take_profit", "stop_loss", "status", "exit_price", "result", "notes",
+    "take_profit", "stop_loss", "current_price", "status", "exit_price",
+    "result", "notes",
 ]
 
 _client = None
@@ -67,13 +68,18 @@ def _get_worksheet():
 
 
 def append_trade(symbol: str, signal: str, entry_low: float, entry_high: float,
-                  take_profit: float, stop_loss: float, notes: str = "") -> None:
-    """Logs a new BUY call with status OPEN."""
+                  take_profit: float, stop_loss: float, current_price: float,
+                  notes: str = "") -> None:
+    """
+    Logs a new BUY call with status OPEN. current_price is the price at
+    the moment the call was made (for reference — it gets refreshed on
+    every later run via update_current_price while the position stays OPEN).
+    """
     ws = _get_worksheet()
     row = [
         datetime.now(timezone.utc).isoformat(),
         symbol, signal, entry_low, entry_high, take_profit, stop_loss,
-        "OPEN", "", "", notes,
+        current_price, "OPEN", "", "", notes,
     ]
     ws.append_row(row)
 
@@ -99,3 +105,9 @@ def update_position(row: int, status: str, exit_price: float, result: str) -> No
     ws.update_cell(row, HEADERS.index("status") + 1, status)
     ws.update_cell(row, HEADERS.index("exit_price") + 1, exit_price)
     ws.update_cell(row, HEADERS.index("result") + 1, result)
+
+
+def update_current_price(row: int, price: float) -> None:
+    """Refreshes just the current_price cell for a row that's still OPEN."""
+    ws = _get_worksheet()
+    ws.update_cell(row, HEADERS.index("current_price") + 1, price)

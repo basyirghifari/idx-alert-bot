@@ -72,7 +72,6 @@ BAKRIE_GROUP_STOCKS = [
     "BUMI.JK",   # Bumi Resources — coal mining
     "BRMS.JK",   # Bumi Resources Minerals — mineral & gold mining
     "ENRG.JK",   # Energi Mega Persada — oil & gas exploration
-    "UNSP.JK",   # Bakrie Sumatera Plantations — palm oil & rubber
     "ELTY.JK",   # Bakrieland Development — property/real estate
     "DEWA.JK",   # Darma Henwa — mining contractor services
     "BTEL.JK",   # Bakrie Telecom — telecommunications
@@ -120,7 +119,47 @@ SARATOGA_GROUP_STOCKS = [
     "PALM.JK",   # Provident Investasi Bersama (formerly Provident Agro) — agribusiness/CPO
 ]
 
-WATCHLIST = CONGLOMERATE_GROUP_STOCKS + COMMODITY_STOCKS + FMCG_STOCKS + BAKRIE_GROUP_STOCKS + PRAJOGO_PANGESTU_STOCKS + SALIM_GROUP_STOCKS + SARATOGA_GROUP_STOCKS
+# Sinar Mas Group ecosystem (Eka Tjipta Widjaja family). SMAR (agribusiness/
+# CPO) is already tracked under CONGLOMERATE_GROUP_STOCKS above, so not
+# repeated here.
+SINARMAS_GROUP_STOCKS = [
+    "BSDE.JK",   # Bumi Serpong Damai — property, satellite city developer
+    "DSSA.JK",   # Dian Swastatika Sentosa — energy, mining & power
+    "GEMS.JK",   # Golden Energy Mines — coal mining & trading
+    "INKP.JK",   # Indah Kiat Pulp & Paper — pulp & packaging producer
+    "TKIM.JK",   # Pabrik Kertas Tjiwi Kimia — paper & stationery producer
+    "BSIM.JK",   # Bank Sinarmas — commercial banking
+    "SMMA.JK",   # Sinar Mas Multiartha — group financial services holding
+    "DUTI.JK",   # Duta Pertiwi — commercial property developer
+    "DMAS.JK",   # Puradelta Lestari — Kota Deltamas industrial estate developer
+]
+
+# High-volatility, high-beta stocks that are legitimately liquid and
+# actively covered by mainstream analysts — NOT stocks currently flagged
+# by OJK/BEI for suspected manipulation (a.k.a. "saham gorengan"). Some
+# of those are suspended from trading entirely, so they wouldn't work
+# with this bot anyway. This category is the safer way to get bigger
+# swings: real trading activity, real analyst coverage, no fraud flags.
+HIGH_VOLATILITY_STOCKS = [
+    "ARTO.JK",   # Bank Jago — digital bank, high beta (~1.2)
+    "GOTO.JK",   # GoTo Gojek Tokopedia — tech/e-commerce, very high volume
+    "EMTK.JK",   # Elang Mahkota Teknologi — media/tech holding
+    "WIFI.JK",   # Solusi Sinergi Digital — telecom/internet infra, frequent trader pick
+    "BUKA.JK",   # Bukalapak — e-commerce
+    "PANI.JK",   # Pantai Indah Kapuk Dua — property, known for sharp swings
+    "ESSA.JK",   # Essa Industries — petrochemical/ammonia
+    "ARCI.JK",   # Archi Indonesia — gold mining
+    "BBYB.JK",   # Bank Neo Commerce — digital bank
+    "ADMR.JK",   # Alamtri Minerals Indonesia — coal
+    "PGEO.JK",   # Pertamina Geothermal Energy — geothermal energy
+    "HRTA.JK",   # Hartadinata Abadi — gold jewelry, tracks gold price swings
+]
+
+WATCHLIST = (
+    CONGLOMERATE_GROUP_STOCKS + COMMODITY_STOCKS + FMCG_STOCKS
+    + BAKRIE_GROUP_STOCKS + PRAJOGO_PANGESTU_STOCKS + SALIM_GROUP_STOCKS
+    + SARATOGA_GROUP_STOCKS + SINARMAS_GROUP_STOCKS + HIGH_VOLATILITY_STOCKS
+)
 
 # Alerts (including divergence) are evaluated on the 1-hour timeframe —
 # better suited for swing trading than 15m, since it filters out a lot
@@ -201,6 +240,7 @@ def main():
                             f"{plan['reasoning']}"
                         )
                         try:
+                            latest_price = float(df.iloc[-1]["close"])
                             google_sheets.append_trade(
                                 symbol=symbol,
                                 signal="; ".join(buy_messages),
@@ -208,6 +248,7 @@ def main():
                                 entry_high=plan["entry_high"],
                                 take_profit=plan["take_profit"],
                                 stop_loss=plan["stop_loss"],
+                                current_price=latest_price,
                                 notes=plan["reasoning"],
                             )
                         except Exception as e:
