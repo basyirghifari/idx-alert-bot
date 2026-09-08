@@ -63,7 +63,7 @@
     "rsi_zone": "neutral"
   },
   "MDKA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-24 15:00:00+07:00"
   },
   "TINS.JK": {
@@ -92,7 +92,8 @@
     "divergence_regular_bullish": "2026-09-04 15:00:00+07:00"
   },
   "MYOR.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_regular_bullish": "2026-09-08 10:00:00+07:00"
   },
   "GGRM.JK": {
     "rsi_zone": "neutral",
@@ -113,7 +114,7 @@
     "rsi_zone": "neutral"
   },
   "BRMS.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "ENRG.JK": {
     "rsi_zone": "overbought"
@@ -166,7 +167,8 @@
   },
   "DNET.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-01 11:00:00+07:00"
+    "divergence_hidden_bullish": "2026-09-01 11:00:00+07:00",
+    "divergence_regular_bullish": "2026-09-08 09:00:00+07:00"
   },
   "IMAS.JK": {
     "rsi_zone": "neutral"
@@ -182,7 +184,7 @@
     "rsi_zone": "neutral"
   },
   "AMMN.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "overbought"
   },
   "SRTG.JK": {
     "rsi_zone": "neutral",
@@ -202,6 +204,68 @@
     "rsi_zone": "neutral"
   },
   "PALM.JK": {
+    "rsi_zone": "neutral"
+  },
+  "BSDE.JK": {
+    "rsi_zone": "neutral"
+  },
+  "DSSA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "GEMS.JK": {
+    "rsi_zone": "neutral",
+    "divergence_hidden_bullish": "2026-09-08 11:00:00+07:00"
+  },
+  "INKP.JK": {
+    "rsi_zone": "overbought"
+  },
+  "TKIM.JK": {
+    "rsi_zone": "neutral"
+  },
+  "BSIM.JK": {
+    "rsi_zone": "neutral"
+  },
+  "SMMA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "DUTI.JK": {
+    "rsi_zone": "overbought"
+  },
+  "DMAS.JK": {
+    "rsi_zone": "neutral"
+  },
+  "ARTO.JK": {
+    "rsi_zone": "neutral"
+  },
+  "GOTO.JK": {},
+  "EMTK.JK": {
+    "rsi_zone": "neutral"
+  },
+  "WIFI.JK": {
+    "rsi_zone": "neutral"
+  },
+  "BUKA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "PANI.JK": {
+    "rsi_zone": "neutral"
+  },
+  "ESSA.JK": {
+    "rsi_zone": "neutral"
+  },
+  "ARCI.JK": {
+    "rsi_zone": "neutral"
+  },
+  "BBYB.JK": {
+    "rsi_zone": "neutral"
+  },
+  "ADMR.JK": {
+    "rsi_zone": "neutral"
+  },
+  "PGEO.JK": {
+    "rsi_zone": "neutral"
+  },
+  "HRTA.JK": {
     "rsi_zone": "neutral"
   }
 }
