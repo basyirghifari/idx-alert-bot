@@ -149,7 +149,7 @@
     "rsi_zone": "neutral"
   },
   "BREN.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-07 09:00:00+07:00"
   },
   "CUAN.JK": {
