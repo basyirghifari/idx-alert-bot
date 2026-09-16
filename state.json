@@ -92,7 +92,7 @@
     "rsi_zone": "neutral"
   },
   "ICBP.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-04 15:00:00+07:00"
   },
   "MYOR.JK": {
@@ -122,7 +122,7 @@
     "rsi_zone": "neutral"
   },
   "ENRG.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "UNSP.JK": {
     "rsi_zone": "neutral"
@@ -131,7 +131,7 @@
     "rsi_zone": "neutral"
   },
   "DEWA.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "VIVA.JK": {
     "rsi_zone": "neutral",
@@ -142,7 +142,7 @@
     "divergence_regular_bullish": "2026-09-11 09:00:00+07:00"
   },
   "VKTR.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-14 15:00:00+07:00"
   },
   "JGLE.JK": {
@@ -168,7 +168,8 @@
     "divergence_hidden_bullish": "2026-09-09 10:00:00+07:00"
   },
   "INDF.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_regular_bullish": "2026-09-16 10:00:00+07:00"
   },
   "SIMP.JK": {
     "rsi_zone": "neutral"
@@ -189,7 +190,7 @@
     "divergence_hidden_bullish": "2026-09-04 09:00:00+07:00"
   },
   "DCII.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "AMMN.JK": {
     "rsi_zone": "neutral"
@@ -223,7 +224,8 @@
   },
   "GEMS.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-08 11:00:00+07:00"
+    "divergence_hidden_bullish": "2026-09-08 11:00:00+07:00",
+    "divergence_regular_bullish": "2026-09-16 11:00:00+07:00"
   },
   "INKP.JK": {
     "rsi_zone": "neutral"
@@ -245,7 +247,7 @@
     "rsi_zone": "neutral"
   },
   "ARTO.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "GOTO.JK": {},
   "EMTK.JK": {
@@ -258,10 +260,10 @@
     "rsi_zone": "neutral"
   },
   "PANI.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ESSA.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ARCI.JK": {
     "rsi_zone": "neutral"
@@ -270,7 +272,7 @@
     "rsi_zone": "neutral"
   },
   "ADMR.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "PGEO.JK": {
     "rsi_zone": "neutral"
