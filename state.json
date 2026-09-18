@@ -59,7 +59,8 @@
     "divergence_hidden_bullish": "2026-09-16 15:00:00+07:00"
   },
   "INCO.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_hidden_bullish": "2026-09-17 15:00:00+07:00"
   },
   "ANTM.JK": {
     "rsi_zone": "neutral",
@@ -169,7 +170,7 @@
     "divergence_hidden_bullish": "2026-09-09 10:00:00+07:00"
   },
   "INDF.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-16 10:00:00+07:00"
   },
   "SIMP.JK": {
@@ -213,7 +214,7 @@
   },
   "MUTU.JK": {
     "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-09-15 09:00:00+07:00",
+    "divergence_regular_bullish": "2026-09-18 09:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-17 10:00:00+07:00"
   },
   "PALM.JK": {
@@ -275,7 +276,7 @@
     "rsi_zone": "neutral"
   },
   "BBYB.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ADMR.JK": {
     "rsi_zone": "neutral",
