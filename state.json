@@ -31,7 +31,7 @@
     "divergence_regular_bullish": "2026-09-21 09:00:00+07:00"
   },
   "LPKR.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "BHIT.JK": {
     "rsi_zone": "neutral"
@@ -80,7 +80,7 @@
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "LSIP.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-09-16 15:00:00+07:00",
     "divergence_regular_bullish": "2026-09-11 09:00:00+07:00"
   },
@@ -137,14 +137,14 @@
     "rsi_zone": "neutral"
   },
   "DEWA.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "VIVA.JK": {
     "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-14 14:00:00+07:00"
   },
   "MDIA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-11 09:00:00+07:00"
   },
   "VKTR.JK": {
@@ -226,10 +226,10 @@
     "rsi_zone": "neutral"
   },
   "BSDE.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "DSSA.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "GEMS.JK": {
     "rsi_zone": "neutral",
@@ -261,7 +261,7 @@
   },
   "GOTO.JK": {},
   "EMTK.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-17 10:00:00+07:00"
   },
   "WIFI.JK": {
@@ -271,7 +271,7 @@
     "rsi_zone": "neutral"
   },
   "PANI.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ESSA.JK": {
     "rsi_zone": "neutral",
