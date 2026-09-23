@@ -34,7 +34,7 @@
     "rsi_zone": "neutral"
   },
   "BHIT.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "PNLF.JK": {
     "rsi_zone": "neutral"
@@ -80,7 +80,7 @@
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "LSIP.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-09-16 15:00:00+07:00",
     "divergence_regular_bullish": "2026-09-23 09:00:00+07:00"
   },
@@ -140,7 +140,7 @@
     "rsi_zone": "neutral"
   },
   "VIVA.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-14 14:00:00+07:00"
   },
   "MDIA.JK": {
@@ -148,7 +148,7 @@
     "divergence_regular_bullish": "2026-09-11 09:00:00+07:00"
   },
   "VKTR.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_regular_bullish": "2026-09-14 15:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-22 10:00:00+07:00"
   },
@@ -197,7 +197,8 @@
   },
   "BINA.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-04 09:00:00+07:00"
+    "divergence_hidden_bullish": "2026-09-04 09:00:00+07:00",
+    "divergence_regular_bullish": "2026-09-23 10:00:00+07:00"
   },
   "DCII.JK": {
     "rsi_zone": "neutral"
@@ -274,7 +275,7 @@
     "rsi_zone": "neutral"
   },
   "PANI.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "ESSA.JK": {
     "rsi_zone": "neutral",
