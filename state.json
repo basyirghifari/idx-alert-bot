@@ -27,14 +27,14 @@
     "divergence_hidden_bullish": "2026-09-03 13:00:00+07:00"
   },
   "BNBR.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-24 13:00:00+07:00"
   },
   "LPKR.JK": {
     "rsi_zone": "neutral"
   },
   "BHIT.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "PNLF.JK": {
     "rsi_zone": "neutral"
@@ -70,13 +70,13 @@
   },
   "MDKA.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
+    "divergence_hidden_bullish": "2026-09-24 15:00:00+07:00"
   },
   "TINS.JK": {
     "rsi_zone": "neutral"
   },
   "AALI.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "LSIP.JK": {
@@ -100,7 +100,7 @@
     "divergence_regular_bullish": "2026-09-21 09:00:00+07:00"
   },
   "MYOR.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-14 15:00:00+07:00"
   },
   "GGRM.JK": {
@@ -109,7 +109,7 @@
   },
   "HMSP.JK": {
     "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-09-16 15:00:00+07:00"
+    "divergence_regular_bullish": "2026-09-24 15:00:00+07:00"
   },
   "KLBF.JK": {
     "rsi_zone": "neutral",
@@ -144,7 +144,7 @@
     "divergence_regular_bullish": "2026-09-14 14:00:00+07:00"
   },
   "MDIA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-11 09:00:00+07:00"
   },
   "VKTR.JK": {
@@ -153,7 +153,7 @@
     "divergence_hidden_bullish": "2026-09-22 10:00:00+07:00"
   },
   "JGLE.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-21 09:00:00+07:00"
   },
   "BREN.JK": {
@@ -226,10 +226,11 @@
     "divergence_hidden_bullish": "2026-09-17 10:00:00+07:00"
   },
   "PALM.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_regular_bullish": "2026-09-24 13:00:00+07:00"
   },
   "BSDE.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "DSSA.JK": {
     "rsi_zone": "neutral"
@@ -275,7 +276,7 @@
     "rsi_zone": "neutral"
   },
   "PANI.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ESSA.JK": {
     "rsi_zone": "neutral",
