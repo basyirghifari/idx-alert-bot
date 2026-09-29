@@ -17,7 +17,7 @@
     "rsi_zone": "overbought"
   },
   "BRPT.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-08-24 11:00:00+07:00",
     "divergence_regular_bullish": "2026-09-14 15:00:00+07:00"
   },
@@ -45,7 +45,7 @@
     "divergence_hidden_bullish": "2026-09-29 09:00:00+07:00"
   },
   "SMAR.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-28 10:00:00+07:00",
     "divergence_regular_bullish": "2026-09-24 09:00:00+07:00"
   },
@@ -274,7 +274,7 @@
     "rsi_zone": "oversold"
   },
   "EMTK.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-29 09:00:00+07:00"
   },
   "WIFI.JK": {
@@ -286,14 +286,14 @@
     "divergence_hidden_bullish": "2026-09-29 09:00:00+07:00"
   },
   "PANI.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "ESSA.JK": {
     "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-29 09:00:00+07:00"
   },
   "ARCI.JK": {
-    "rsi_zone": "oversold"
+    "rsi_zone": "neutral"
   },
   "BBYB.JK": {
     "rsi_zone": "neutral",
