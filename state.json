@@ -17,7 +17,7 @@
     "rsi_zone": "overbought"
   },
   "BRPT.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-08-24 11:00:00+07:00",
     "divergence_regular_bullish": "2026-09-14 15:00:00+07:00"
   },
@@ -45,7 +45,7 @@
     "divergence_hidden_bullish": "2026-09-29 09:00:00+07:00"
   },
   "SMAR.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-08-28 10:00:00+07:00",
     "divergence_regular_bullish": "2026-09-24 09:00:00+07:00"
   },
@@ -62,7 +62,7 @@
     "divergence_hidden_bullish": "2026-09-24 13:00:00+07:00"
   },
   "INCO.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-09-25 09:00:00+07:00"
   },
   "ANTM.JK": {
@@ -81,7 +81,7 @@
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "LSIP.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-09-16 15:00:00+07:00",
     "divergence_regular_bullish": "2026-09-24 10:00:00+07:00"
   },
@@ -91,7 +91,7 @@
     "divergence_regular_bullish": "2026-09-28 09:00:00+07:00"
   },
   "MEDC.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-09-15 09:00:00+07:00",
     "divergence_regular_bullish": "2026-09-28 09:00:00+07:00"
   },
@@ -127,7 +127,7 @@
     "divergence_regular_bullish": "2026-09-21 09:00:00+07:00"
   },
   "BRMS.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold"
   },
   "ENRG.JK": {
     "rsi_zone": "neutral",
@@ -165,7 +165,7 @@
     "divergence_hidden_bullish": "2026-09-22 10:00:00+07:00"
   },
   "CUAN.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "PTRO.JK": {
@@ -269,7 +269,8 @@
     "rsi_zone": "neutral"
   },
   "ARTO.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "oversold",
+    "divergence_regular_bullish": "2026-09-30 13:00:00+07:00"
   },
   "GOTO.JK": {
     "rsi_zone": "oversold"
