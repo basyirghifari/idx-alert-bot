@@ -78,7 +78,7 @@
     "divergence_hidden_bullish": "2026-10-01 15:00:00+07:00"
   },
   "AALI.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "LSIP.JK": {
@@ -242,7 +242,7 @@
     "rsi_zone": "neutral"
   },
   "DSSA.JK": {
-    "rsi_zone": "overbought",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-28 09:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-29 09:00:00+07:00"
   },
