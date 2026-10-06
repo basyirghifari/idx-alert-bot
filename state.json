@@ -131,7 +131,7 @@
     "rsi_zone": "neutral"
   },
   "ENRG.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-21 09:00:00+07:00"
   },
   "UNSP.JK": {
@@ -236,13 +236,13 @@
   },
   "PALM.JK": {
     "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-09-24 13:00:00+07:00"
+    "divergence_regular_bullish": "2026-10-06 09:00:00+07:00"
   },
   "BSDE.JK": {
     "rsi_zone": "neutral"
   },
   "DSSA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_regular_bullish": "2026-09-28 09:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-29 09:00:00+07:00"
   },
