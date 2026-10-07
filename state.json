@@ -42,7 +42,7 @@
   },
   "MEGA.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-10-02 09:00:00+07:00"
+    "divergence_hidden_bullish": "2026-10-07 10:00:00+07:00"
   },
   "SMAR.JK": {
     "rsi_zone": "neutral",
@@ -92,7 +92,7 @@
     "divergence_regular_bullish": "2026-10-05 11:00:00+07:00"
   },
   "MEDC.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-09-15 09:00:00+07:00",
     "divergence_regular_bullish": "2026-09-28 09:00:00+07:00"
   },
@@ -149,7 +149,7 @@
     "divergence_regular_bullish": "2026-09-14 14:00:00+07:00"
   },
   "MDIA.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-29 09:00:00+07:00"
   },
   "VKTR.JK": {
