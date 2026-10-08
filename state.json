@@ -42,7 +42,8 @@
   },
   "MEGA.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-10-07 10:00:00+07:00"
+    "divergence_hidden_bullish": "2026-10-07 10:00:00+07:00",
+    "divergence_regular_bullish": "2026-10-08 09:00:00+07:00"
   },
   "SMAR.JK": {
     "rsi_zone": "neutral",
@@ -78,7 +79,7 @@
     "divergence_hidden_bullish": "2026-10-01 15:00:00+07:00"
   },
   "AALI.JK": {
-    "rsi_zone": "overbought",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "LSIP.JK": {
@@ -92,7 +93,7 @@
     "divergence_regular_bullish": "2026-10-05 11:00:00+07:00"
   },
   "MEDC.JK": {
-    "rsi_zone": "overbought",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-09-15 09:00:00+07:00",
     "divergence_regular_bullish": "2026-09-28 09:00:00+07:00"
   },
@@ -131,8 +132,8 @@
     "rsi_zone": "neutral"
   },
   "ENRG.JK": {
-    "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-09-21 09:00:00+07:00"
+    "rsi_zone": "oversold",
+    "divergence_regular_bullish": "2026-10-08 11:00:00+07:00"
   },
   "UNSP.JK": {
     "rsi_zone": "neutral"
@@ -162,12 +163,12 @@
     "divergence_regular_bullish": "2026-09-21 09:00:00+07:00"
   },
   "BREN.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-07 09:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-22 10:00:00+07:00"
   },
   "CUAN.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-09-11 09:00:00+07:00"
   },
   "PTRO.JK": {
@@ -287,7 +288,7 @@
     "divergence_regular_bullish": "2026-10-02 09:00:00+07:00"
   },
   "WIFI.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-29 09:00:00+07:00"
   },
   "BUKA.JK": {
@@ -317,7 +318,7 @@
     "divergence_hidden_bullish": "2026-09-23 09:00:00+07:00"
   },
   "HRTA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-09-15 09:00:00+07:00"
   }
 }
