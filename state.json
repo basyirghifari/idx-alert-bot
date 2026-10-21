@@ -36,7 +36,7 @@
   },
   "BHIT.JK": {
     "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-09-28 09:00:00+07:00"
+    "divergence_regular_bullish": "2026-10-20 15:00:00+07:00"
   },
   "PNLF.JK": {
     "rsi_zone": "neutral"
@@ -66,11 +66,12 @@
   "INCO.JK": {
     "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-09-25 09:00:00+07:00",
-    "divergence_regular_bullish": "2026-10-15 10:00:00+07:00"
+    "divergence_regular_bullish": "2026-10-21 09:00:00+07:00"
   },
   "ANTM.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-17 10:00:00+07:00"
+    "divergence_hidden_bullish": "2026-09-17 10:00:00+07:00",
+    "divergence_regular_bullish": "2026-10-21 10:00:00+07:00"
   },
   "MDKA.JK": {
     "rsi_zone": "oversold",
@@ -153,11 +154,11 @@
     "divergence_regular_bullish": "2026-09-14 14:00:00+07:00"
   },
   "MDIA.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-09-29 09:00:00+07:00"
   },
   "VKTR.JK": {
-    "rsi_zone": "oversold",
+    "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-10-13 09:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-28 09:00:00+07:00"
   },
@@ -203,7 +204,7 @@
   },
   "IMAS.JK": {
     "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-10-02 09:00:00+07:00",
+    "divergence_regular_bullish": "2026-10-20 15:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-29 15:00:00+07:00"
   },
   "IMJS.JK": {
@@ -283,7 +284,7 @@
     "rsi_zone": "neutral"
   },
   "DMAS.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-10-13 09:00:00+07:00"
   },
   "ARTO.JK": {
