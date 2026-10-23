@@ -58,11 +58,11 @@
     "divergence_hidden_bullish": "2026-08-21 15:00:00+07:00"
   },
   "PTBA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-10-09 09:00:00+07:00"
   },
   "ITMG.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-10-19 09:00:00+07:00"
   },
   "INCO.JK": {
@@ -72,7 +72,7 @@
   },
   "ANTM.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-09-17 10:00:00+07:00",
+    "divergence_hidden_bullish": "2026-10-22 14:00:00+07:00",
     "divergence_regular_bullish": "2026-10-21 10:00:00+07:00"
   },
   "MDKA.JK": {
@@ -89,7 +89,7 @@
     "divergence_hidden_bullish": "2026-10-19 09:00:00+07:00"
   },
   "LSIP.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-10-15 10:00:00+07:00",
     "divergence_regular_bullish": "2026-10-13 09:00:00+07:00"
   },
@@ -99,7 +99,7 @@
     "divergence_regular_bullish": "2026-10-05 11:00:00+07:00"
   },
   "MEDC.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_hidden_bullish": "2026-10-22 09:00:00+07:00",
     "divergence_regular_bullish": "2026-09-28 09:00:00+07:00"
   },
@@ -136,7 +136,8 @@
     "divergence_regular_bullish": "2026-10-02 09:00:00+07:00"
   },
   "BRMS.JK": {
-    "rsi_zone": "neutral"
+    "rsi_zone": "neutral",
+    "divergence_hidden_bullish": "2026-10-22 15:00:00+07:00"
   },
   "ENRG.JK": {
     "rsi_zone": "neutral",
@@ -220,11 +221,11 @@
     "divergence_regular_bullish": "2026-09-23 10:00:00+07:00"
   },
   "DCII.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_regular_bullish": "2026-10-16 10:00:00+07:00"
   },
   "AMMN.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_regular_bullish": "2026-10-13 09:00:00+07:00"
   },
   "SRTG.JK": {
@@ -267,7 +268,7 @@
   "INKP.JK": {
     "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-10-22 09:00:00+07:00",
-    "divergence_hidden_bullish": "2026-10-07 10:00:00+07:00"
+    "divergence_hidden_bullish": "2026-10-22 14:00:00+07:00"
   },
   "TKIM.JK": {
     "rsi_zone": "neutral",
