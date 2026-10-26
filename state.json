@@ -23,7 +23,7 @@
     "divergence_regular_bullish": "2026-10-01 10:00:00+07:00"
   },
   "TPIA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "overbought",
     "divergence_regular_bullish": "2026-10-20 09:00:00+07:00",
     "divergence_hidden_bullish": "2026-09-03 13:00:00+07:00"
   },
@@ -76,7 +76,7 @@
     "divergence_regular_bullish": "2026-10-21 10:00:00+07:00"
   },
   "MDKA.JK": {
-    "rsi_zone": "neutral",
+    "rsi_zone": "oversold",
     "divergence_hidden_bullish": "2026-09-24 15:00:00+07:00"
   },
   "TINS.JK": {
@@ -85,7 +85,7 @@
     "divergence_regular_bullish": "2026-10-21 10:00:00+07:00"
   },
   "AALI.JK": {
-    "rsi_zone": "overbought",
+    "rsi_zone": "neutral",
     "divergence_hidden_bullish": "2026-10-19 09:00:00+07:00"
   },
   "LSIP.JK": {
@@ -232,7 +232,7 @@
   "SRTG.JK": {
     "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-10-13 09:00:00+07:00",
-    "divergence_hidden_bullish": "2026-10-07 09:00:00+07:00"
+    "divergence_hidden_bullish": "2026-10-26 10:00:00+07:00"
   },
   "MBMA.JK": {
     "rsi_zone": "neutral",
@@ -248,11 +248,11 @@
   "MUTU.JK": {
     "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-10-22 09:00:00+07:00",
-    "divergence_hidden_bullish": "2026-10-09 09:00:00+07:00"
+    "divergence_hidden_bullish": "2026-10-26 09:00:00+07:00"
   },
   "PALM.JK": {
     "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-10-06 09:00:00+07:00"
+    "divergence_regular_bullish": "2026-10-26 09:00:00+07:00"
   },
   "BSDE.JK": {
     "rsi_zone": "neutral"
@@ -303,7 +303,8 @@
   },
   "EMTK.JK": {
     "rsi_zone": "neutral",
-    "divergence_regular_bullish": "2026-10-22 09:00:00+07:00"
+    "divergence_regular_bullish": "2026-10-22 09:00:00+07:00",
+    "divergence_hidden_bullish": "2026-10-26 10:00:00+07:00"
   },
   "WIFI.JK": {
     "rsi_zone": "neutral",
@@ -315,7 +316,7 @@
   },
   "PANI.JK": {
     "rsi_zone": "neutral",
-    "divergence_hidden_bullish": "2026-10-23 09:00:00+07:00"
+    "divergence_hidden_bullish": "2026-10-26 10:00:00+07:00"
   },
   "ESSA.JK": {
     "rsi_zone": "neutral",
@@ -332,7 +333,7 @@
   "ADMR.JK": {
     "rsi_zone": "neutral",
     "divergence_regular_bullish": "2026-10-20 09:00:00+07:00",
-    "divergence_hidden_bullish": "2026-10-23 09:00:00+07:00"
+    "divergence_hidden_bullish": "2026-10-26 10:00:00+07:00"
   },
   "PGEO.JK": {
     "rsi_zone": "neutral",
